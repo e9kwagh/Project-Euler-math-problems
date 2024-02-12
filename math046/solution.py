@@ -22,14 +22,14 @@ def primes(limit):
 def answer():
     """answer"""
     limit = 10000
-    primes = primes(limit)
+    prime_list = primes(limit)
     
     for odd_composite in range(9, limit, 2):
         if not is_prime(odd_composite):
             if not any((odd_composite - prime) // 2 == int(((odd_composite - prime) // 2)**0.5)**2
-                        for prime in primes if prime < odd_composite):
+                        for prime in prime_list if prime < odd_composite):
                 return odd_composite
 
 if __name__ == "__main__":
     print("Problem no 46")
-    print("answer = :", answer())
+    print("answer =:", answer())

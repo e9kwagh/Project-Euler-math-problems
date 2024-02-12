@@ -8,7 +8,7 @@ def answer():
     return solver("0022_names.txt")
 
 
-# names: str
+
 def solver(filename="0022_names.txt"):
     """solver()"""
 

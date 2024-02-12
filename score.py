@@ -1,7 +1,7 @@
 import os 
 def run_files():
     start = 1 
-    end = 31
+    end = 45
 
     li = []
 
@@ -17,7 +17,7 @@ def run_files():
     
         # print(val)
 
-        os.system('python3 '+val)
+        os.system('python ' + val)
 
 
 if __name__=="__main__" :

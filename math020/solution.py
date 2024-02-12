@@ -1,7 +1,10 @@
 """solver"""
+
+
 def answer():
     """answer"""
-    return solver(10)
+    return solver(100)
+
 
 def solver(n):
     """solver"""
@@ -12,14 +15,13 @@ def solver(n):
             prod = (int(num) * i) + carry
             carry = prod // 10
             end = prod % 10
-            rev += str(end)
-            final = rev
+            rev = str(end) + rev
         if carry:
-            final += str(carry)
-        number = final[::-1]
+            rev = str(carry) + rev
+        number = rev
     return sum(map(int, number))
 
 
 if __name__ == "__main__":
     print(solver(100))
-    print(answer())
+    print("answer of math020 = ", answer())

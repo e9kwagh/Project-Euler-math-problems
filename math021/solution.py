@@ -37,5 +37,5 @@ def solver(p: int, q: int):
 
 if __name__ == "__main__":
     print(solver(1, 10000))
-    print(answer())
+    print("answer of math021 = ", answer())
     # 31626

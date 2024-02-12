@@ -1,4 +1,6 @@
 """math041"""
+
+
 def is_pandigital(number_str):
     """pandigital."""
     return sorted(number_str) == [str(i) for i in range(1, len(number_str) + 1)]
@@ -36,7 +38,6 @@ def generate_pandigitals(n):
 
         digits[i - 1], digits[j] = digits[j], digits[i - 1]
 
-        # Reverse the suffix
         digits[i:] = reversed(digits[i:])
 
     return pandigitals
@@ -56,4 +57,4 @@ def answer():
 
 if __name__ == "__main__":
     print("Problem no : 41")
-    print("answer():", answer())
+    print("Answer of math041 = ", answer())

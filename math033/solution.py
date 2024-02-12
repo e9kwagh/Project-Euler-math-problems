@@ -1,59 +1,28 @@
-"""math033"""
-
 
 def gcd(a, b):
-    """gcd"""
     while b:
         a, b = b, a % b
     return a
 
-
-def simplify_fraction(num, deno):
-    """simplify"""
-    common_divisor = gcd(num, deno)
-    s_num = num // common_divisor
-    s_den = deno // common_divisor
-    return s_num, s_den
-
-
-def find_fractions():
-    """fractions"""
-    curious_fractions = []
+def answer():
+    pro_num = 1
+    pro_deno = 1
 
     for num in range(10, 100):
-        for deno  in range(num + 1, 100):
-            num_str = str(num)
-            den_str = str(deno)
+        for deno in range(num + 1, 100):
+            c_digit = set(str(num)) & set(str(deno))
+            if len(c_digit) == 1 and '0' not in c_digit:
+                canceled_digit = c_digit.pop()  
+                cancel_num = int(str(num).replace(canceled_digit, '', 1))
+                cancel_deno = int(str(deno).replace(canceled_digit, '', 1))
 
-            if num_str[0] != num_str[1] and den_str[0] != den_str[1]:
-                if num_str[1] == den_str[0] and den_str[1] != "0":
-                    simplified_fraction = simplify_fraction(num, deno)
-                    if (int(num_str[0]), int(den_str[1])) == simplified_fraction:
-                        curious_fractions.append((num, deno))
+                if cancel_deno != 0 and num / deno == cancel_num / cancel_deno:
+                    pro_num *= cancel_num
+                    pro_deno *= cancel_deno
 
-    return curious_fractions
+    return pro_deno // gcd(pro_num, pro_deno)
 
-
-def product_of_fractions(fractions):
-    """product"""
-    result_numerator = 1
-    result_denominator = 1
-    for num, deno in fractions:
-        result_numerator *= num
-        result_denominator *= deno
-
-    # common_divisor = gcd(result_numerator, result_denominator)
-    simplified_result = simplify_fraction(result_numerator, result_denominator)
-
-    return simplified_result[1]
-
-
-def answer():
-    """answer"""
-    curious_fractions = find_fractions()
-    return product_of_fractions(curious_fractions)
 
 
 if __name__ == "__main__":
-    print("Math033")
-    print("answer/solver = ", answer())
+    print("Answer of math033:", answer())

@@ -6,7 +6,6 @@ def answer(sentance):
     return solver(sentance, 4)
 
 
-
 def solver(numgrid, n: int):
     """solver.py"""
     numgrid = [
@@ -97,4 +96,4 @@ if __name__ == "__main__":
 
     result = solver(numGrid_1, 4)
     print(result)
-
+    print("answer of math011 = ", answer(numGrid_1))

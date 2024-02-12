@@ -1,19 +1,21 @@
 """math problem no 16"""
 
+
 def answer():
     """this is ans"""
     return solver(1000)
+
 
 def solver(n):
     """solver"""
     start = str(2)
     final = ""
-    if n == 0 :
+    if n == 0:
         return 1
 
     for _ in range(2, n + 1):
-        start = str(start)    
-        result,carry = "",0
+        start = str(start)
+        result, carry = "", 0
         for num in start[::-1]:
             value = int(num) * 2 + carry
             reminder = value % 10
@@ -30,4 +32,4 @@ def solver(n):
 
 if __name__ == "__main__":
     print(solver(1000))
-    print(answer())
+    print("answer of math016 = ", answer())

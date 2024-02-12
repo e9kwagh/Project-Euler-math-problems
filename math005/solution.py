@@ -2,29 +2,39 @@
 that is evenly divisible by all of the numbers between the range p and q, inclusive.
 """
 
+
+def gcd(a, b):
+    """gcd"""
+    while b:
+        a, b = b, a % b
+    return a
+
+
+def lcm(a, b):
+    """lcm"""
+    return a * b // gcd(a, b)
+
+
 def answer():
-    """Edit the file answer.py and update the function answer() to return the answer."""
-    return solver(1,10)
+    """answer"""
+    return solver(1, 20)
+
 
 def solver(p=1, q=10):
-    """creating function to return the smallest divisible no """
+    """solver"""
     if p > q:
         start, end = q, p
     else:
         start, end = p, q
-    num = end
 
-    while True:
-        flag = True
-        for i in range(start, end + 1):
-            if num % i != 0:
-                flag = False
-                break
-        if flag:
-            return num
-        num += 1
+    current_lcm = 1
+
+    for i in range(start, end + 1):
+        current_lcm = lcm(current_lcm, i)
+
+    return current_lcm
 
 
 if __name__ == "__main__":
     print(solver(1, 10))
-    print(answer())
+    print("answer of math005 = ", answer())

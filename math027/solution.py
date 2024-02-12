@@ -1,4 +1,6 @@
 """math027"""
+
+
 def is_prime(num):
     """is_prime"""
     if num < 2:
@@ -8,12 +10,14 @@ def is_prime(num):
             return False
     return True
 
+
 def consecutive_primes(a, b):
     """consecutive_prime"""
     n = 0
-    while is_prime(n**2 + a*n + b):
+    while is_prime(n**2 + a * n + b):
         n += 1
     return n
+
 
 def answer():
     """answer"""
@@ -29,7 +33,7 @@ def answer():
 
     return result_a * result_b
 
+
 if __name__ == "__main__":
-    print(answer())
-#-59231
-    
+    print("answer of math027 = ", answer())
+# -59231

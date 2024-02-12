@@ -1,11 +1,9 @@
-
-
-
-
 """
     Calculate the sum of even or odd Fibonacci numbers within a given range.
     Return : The sum of even or odd Fibonacci numbers in the specified range.
 """
+
+
 def answer():
     """Returns:The sum of even Fibonacci numbers."""
     first, second = 1, 2
@@ -25,17 +23,13 @@ def answer():
 #     dict = {}
 #     for  i , name  in num :
 
-#         check = target - num 
+#         check = target - num
 #         if check in dict :
-#             return [check]     
+#             return [check]
 
 
-
-   
-
-
-def solver(start= 15812, end =91581312, even=False, odd=True):
-    """This is a solver function """
+def solver(start=15812, end=91581312, even=False, odd=True):
+    """This is a solver function"""
     if start > end:
         return 0
 
@@ -51,7 +45,7 @@ def solver(start= 15812, end =91581312, even=False, odd=True):
 
         first, second = second, first + second
 
-    while first <=end:
+    while first <= end:
         if first % 2 == 0:
             even_end += first
         else:
@@ -73,5 +67,4 @@ def solver(start= 15812, end =91581312, even=False, odd=True):
 
 if __name__ == "__main__":
     print(solver(15812, 91581312, even=False, odd=True))
-    print(answer())
-  
+    print("answer of math002 = ", answer())

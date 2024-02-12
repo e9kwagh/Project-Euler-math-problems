@@ -1,9 +1,11 @@
 """math044"""
 
+
 def is_pentagonal(num):
     """penta"""
     n = int((1 + (1 + 24 * num) ** 0.5) / 6)
     return n * (3 * n - 1) // 2 == num
+
 
 def answer():
     """answer()"""
@@ -17,6 +19,7 @@ def answer():
 
     return 0
 
+
 if __name__ == "__main__":
     print("Problem no : math044")
-    print("answer= :", answer())
+    print("Answer of math044 = ", answer())

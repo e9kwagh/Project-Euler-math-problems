@@ -1,5 +1,7 @@
 """solver.py"""
 import datetime
+
+
 def answer():
     """from olver"""
     return solver(datetime.date(1901, 1, 1), datetime.date(2000, 12, 31))
@@ -48,6 +50,4 @@ if __name__ == "__main__":
     start_date = datetime.date(1901, 1, 1)
     end_date = datetime.date(2000, 12, 31)
     print(solver(start_date, end_date))
-    print(answer())
-
-    
+    print("answer of math019 = ", answer())

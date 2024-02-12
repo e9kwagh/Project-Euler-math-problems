@@ -1,14 +1,14 @@
-"""Write code for solver.solver() to find all pythogorean triplets 
-whose sum lies between p and q,"""
 def answer():
-    return solver(1,1000)
+    for i in range(1, 1000):
+        for j in range(i, 1000):
+            k = 1000 - i - j
+            if i**2 + j**2 == k**2:
+                x = i * j * k
+                return x
 
-def solver(p: int = 1, q: int = 1000):  
-    "this is the solver"
-    if p is None:
-        p = 1
-    if q is None:
-        p, q = 1, p
+
+def solver(p: int = 1, q: int = 1000):
+    """Finds Pythagorean triplets whose sum lies between p and q."""
     if q < p:
         p, q = q, p
 
@@ -24,9 +24,10 @@ def solver(p: int = 1, q: int = 1000):
                 else:
                     final[sum(total)].append(total)
 
-    return final
+    length = len(final.keys())
+    return length
 
 
 if __name__ == "__main__":
     print(solver(12))
-    print(answer())
+    print("Answer of math009 =", answer())

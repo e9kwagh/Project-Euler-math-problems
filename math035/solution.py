@@ -53,5 +53,5 @@ def answer():
 
 if __name__ == "__main__":
     print("Question no Math035")
-    print("answer() =", answer())
+    print("Answer of math035 = ", answer())
     print("solver() =", solver(2, 1000000))

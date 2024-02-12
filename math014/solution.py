@@ -1,17 +1,19 @@
 """This is the solver"""
 
+
 def answer():
     """This is the answer()"""
     return solver(2, 1000000)
 
+
 def solver(p: int = None, q: int = None):
-    """ solver()"""
+    """solver()"""
     if p is None and q is None:
         return None
     if p is None:
         p = 2
     if q is None:
-        q,p = p,2
+        q, p = p, 2
     if p > q:
         q, p = p, q
 
@@ -39,5 +41,5 @@ def solver(p: int = None, q: int = None):
 
 
 if __name__ == "__main__":
-    print(solver(1000000,2))
-    print(answer())
+    print(solver(1000000, 2))
+    print("answer of math014 = ", answer())

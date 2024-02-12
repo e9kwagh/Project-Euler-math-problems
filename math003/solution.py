@@ -2,14 +2,15 @@
     Edit the file solver.py to update the function solver to
     return the answer when called as in the below example.
 """
+
+
 def answer():
-    """answer function""" 
+    """answer function"""
     return solver(600851475143)
 
 
-
-def solver(value =600851475143):
-    """This is the solver """
+def solver(value=600851475143):
+    """This is the solver"""
     n = value
     square = int(n**0.5)
     arr = [i for i in range(1, square + 1) if n % i == 0]
@@ -39,6 +40,7 @@ def solver(value =600851475143):
         final = n
     return final
 
+
 if __name__ == "__main__":
     print(solver(600851475143))
-    print(answer())
+    print("answer of math003 = ", answer())

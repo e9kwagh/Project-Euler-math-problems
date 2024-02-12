@@ -27,6 +27,6 @@ def answer():
 
 
 if __name__ == "__main__":
-    print(answer())
+    print("answer of math023 = ", answer())
 
 # 4179871 = ans()

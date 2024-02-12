@@ -2,17 +2,21 @@
 Name Scores
 """
 
- 
+
+import os
+
+
 def answer():
     """answer()"""
-    return solver("0022_names.txt")
+    return solver()
 
 
-
-def solver(filename="0022_names.txt"):
+def solver():
     """solver()"""
 
-    with open(filename,"r", encoding="utf-8") as f:
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(script_dir, "0022_names.txt")
+    with open(file_path, "r", encoding="utf-8") as f:
         data = f.read()
 
     data = data.replace('"', "").replace("\n", "")
@@ -58,4 +62,4 @@ def solver(filename="0022_names.txt"):
 
 if __name__ == "__main__":
     print(solver())
-    print(answer())
+    print("answer of math022 = ", answer())

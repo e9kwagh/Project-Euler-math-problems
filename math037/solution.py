@@ -37,4 +37,4 @@ def answer():
 
 if __name__ == "__main__":
     print("Question no. : Math037 :")
-    print("answer() =", answer())
+    print("Answer of math037 = ", answer())

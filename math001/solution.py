@@ -1,6 +1,5 @@
-
 def answer():
-    """anseer fucntion"""
+    """fucntion"""
     li = []
     for i in range(1000):
         if i % 3 == 0:
@@ -11,7 +10,6 @@ def answer():
 
     add = sum(li)
     return add
-
 
 
 def solver(factors=[4, 7, 11], start=8912, end=40512):
@@ -28,4 +26,4 @@ def solver(factors=[4, 7, 11], start=8912, end=40512):
 
 if __name__ == "__main__":
     print(solver([4, 7, 11], 8912, 40512))
-    print(answer())
+    print("answer of math001 = ", answer())

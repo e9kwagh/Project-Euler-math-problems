@@ -28,4 +28,4 @@ def answer():
 
 if __name__ == "__main__":
     print("question no math034")
-    print("answer() =", answer())
+    print("Answer of math034 = ", answer())

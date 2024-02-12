@@ -35,9 +35,11 @@ main_dict = {
     1000000000: "billion",
 }
 
+
 def answer():
     """this is the ans"""
-    return solver(1,1000)
+    return solver(1, 1000)
+
 
 def less_than_100(num):
     """less function"""
@@ -97,4 +99,4 @@ def solver(a: int = None, b: int = None):
 if __name__ == "__main__":
     result = solver(1000)
     print(result)
-    print(answer())
+    print("answer of math017 = ", answer())

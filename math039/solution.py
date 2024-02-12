@@ -2,8 +2,8 @@
 
 
 def answer():
-    """ansser()"""
     perimeter_limit = 1000
+    max_solutions = 0
     max_solutions_p = 0
 
     for p in range(1, perimeter_limit + 1):
@@ -17,11 +17,12 @@ def answer():
 
                 if a**2 + b**2 == c**2:
                     solutions += 1
-            max_solutions_p = p
+
+            if solutions > max_solutions:
+                max_solutions = solutions
+                max_solutions_p = p
 
     return max_solutions_p
 
-
 if __name__ == "__main__":
-    print("Question no 39 ,might take few sconds:")
-    print("answer  = ", answer())
+    print("Answer of math039 = ", answer())

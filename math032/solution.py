@@ -9,7 +9,7 @@ def is_pan(multiplicand, multiplier, product):
     return "".join(sorted(con_str)) == "123456789"
 
 
-def solver():
+def answer():
     """solver()"""
     pan_products = set()
 
@@ -27,4 +27,4 @@ def solver():
 
 if __name__ == "__main__":
     print("Question no 32")
-    print("solver = ", solver())
+    print("Answer of math032 = ", answer())

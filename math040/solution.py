@@ -2,6 +2,7 @@
 
 import math
 
+
 def digits(n):
     """digit"""
     number = "".join(str(i) for i in range(1, 1000000))
@@ -18,4 +19,4 @@ def answer():
 
 if __name__ == "__main__":
     print("Question no : Math040")
-    print("answer() =", answer())
+    print("Answer of math040 = ", answer())

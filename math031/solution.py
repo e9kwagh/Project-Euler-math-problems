@@ -33,4 +33,4 @@ def solver(n):
 if __name__ == "__main__":
     print("question no 31 :")
     print("solver = ", solver(100))
-    print("answer = ", answer())
+    print("answer of math031 = ", answer())

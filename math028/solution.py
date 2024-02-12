@@ -26,6 +26,6 @@ def solver(n):
 
 
 if __name__ == "__main__":
-    print(answer())
+    print("answer of math028 = ", answer())
     print(solver(1001))
 # 669171001

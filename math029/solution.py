@@ -1,6 +1,5 @@
 """math29"""
 
-
 def multiply_carry(num, multiplier, carry):
     """Multiply"""
     result = 0
@@ -25,20 +24,19 @@ def powerf(num, power):
 
 def solver(n):
     """solver"""
-    distinct_terms = [powerf(a, b) for a in range(2, n + 1) for b in range(2, n + 1)]
-
-    return len(set(distinct_terms))
-
+    distinct_terms = {a ** b for a in range(2, n + 1) for b in range(2, n + 1)}
+    return len(distinct_terms)
 
 def answer():
     """answer()"""
     return solver(100)
 
 
+
 if __name__ == "__main__":
     print("Math029")
     print("solver(5) =", solver(5))
-    print("answer() =", answer())
+    print("answer of math029 = ", answer())
 
 
 # def solver(n):

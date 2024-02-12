@@ -1,4 +1,6 @@
 """prime  solver"""
+
+
 def answer():
     """answer()"""
     return solver(2000000)
@@ -27,5 +29,5 @@ def solver(p: int, q: int = None):
 
 
 if __name__ == "__main__":
-    print(solver(40,2000000))
-    print(answer())
+    print(solver(40, 2000000))
+    print("answer of math010 = ", answer())

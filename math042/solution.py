@@ -19,7 +19,7 @@ def answer():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     file_path = os.path.join(script_dir, "words.txt")
 
-    with open(file_path, "r") as file:
+    with open(file_path, "r", encoding="utf-8") as file:
         words = file.read().replace('"', "").split(",")
 
     count = 0
@@ -31,4 +31,4 @@ def answer():
 
 if __name__ == "__main__":
     print("Problem no : math042")
-    print("answer():", answer())
+    print("Answer of math042= ", answer())

@@ -33,7 +33,7 @@ def solver(p, q):
 
 
 if __name__ == "__main__":
-    print(answer())
+    print("answer of math024 = ", answer())
     print(solver("123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", 10000000000000))
 
 

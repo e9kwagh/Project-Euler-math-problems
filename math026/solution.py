@@ -30,12 +30,13 @@ def solver(limit, digits=None):
     for den in range(2, limit):
         treverse_len = reciprocal_length(den)
 
-        if treverse_len > longest_cycle and all(str(digit) in str(1 / den) for digit in digits):
+        if treverse_len > longest_cycle and all(
+            str(digit) in str(1 / den) for digit in digits
+        ):
             longest_cycle = treverse_len
             result = den
 
     return result
-
 
 
 if __name__ == "__main__":

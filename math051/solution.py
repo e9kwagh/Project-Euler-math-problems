@@ -1,6 +1,3 @@
-"""
-math050
-"""
 def is_prime(num):
     """is prime."""
     if num < 2:
@@ -13,25 +10,13 @@ def is_prime(num):
 
 def answer(limit):
     """answer"""
-    prime_numbers = [i for i in range(2, 1000000) if is_prime(i)]
-    max_length = 0
-    result_prime = 0
-
-    for i in range(len(prime_numbers)):
-        for j in range(i + max_length, len(prime_numbers)):
-            current_sum = sum(prime_numbers[i:j])
-            if current_sum < limit and is_prime(current_sum):
-                max_length = j - i
-                result_prime = current_sum
-            elif current_sum >= limit:
-                break
-
-    return result_prime
+    
+    return -1
 
 
 if __name__ == "__main__":
-    print("Problem no 50")
-    print("Answer of math050 =", answer(1000000))
+    print("Problem no 51 ")
+    print("Answer of math051 incomplete =", answer())
 
 
 # def is_prime(num):

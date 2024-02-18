@@ -24,5 +24,6 @@ def answer():
 
     return max_solutions_p
 
+
 if __name__ == "__main__":
     print("Answer of math039 = ", answer())

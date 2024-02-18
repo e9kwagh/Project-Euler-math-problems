@@ -30,9 +30,11 @@ def factors(num):
 
     return li
 
+
 def answer():
     return -1
 
+
 if __name__ == "__main__":
     print("Problem no 47")
-    print("Answer of math048 = incomplete = ",answer())
+    print("Answer of math048 = incomplete = ", answer())
